@@ -8,9 +8,21 @@
   services.xserver.desktopManager.gnome.enable = false;
   programs.hyprland.enable = true;
 
-fonts.packages = with pkgs; [
-  (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "CascadiaCode" "CascadiaMono" ]; })
-];
+    gnome = {
+  settings = {
+    enable = true;
+    default = {
+      "org.gnome.desktop.interface" = {
+        gtk-theme = "Adwaita-dark";
+        color-scheme = "prefer-dark";
+      };
+    };
+  };
+};
+
+    fonts.packages = with pkgs; [
+      (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "CascadiaCode" "CascadiaMono" ]; })
+    ];
 
   environment.systemPackages = with pkgs; [
     fuzzel
