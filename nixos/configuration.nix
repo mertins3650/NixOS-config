@@ -32,7 +32,7 @@
     ];
 
   home-manager = {
-    extraSpecialArgs = {enherit inputs;};
+    extraSpecialArgs = {inherit inputs;};
             users = {
                 simonm = import ./home.nix;
             }
