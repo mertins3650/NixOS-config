@@ -1,28 +1,18 @@
-
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
   services.xserver.enable = false;
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.displayManager.gdm.wayland = true;
-  services.xserver.desktopManager.gnome.enable = true;
   programs.hyprland.enable = true;
 
-    gnome = {
-  settings = {
-    enable = true;
-    default = {
-      "org.gnome.desktop.interface" = {
-        gtk-theme = "Adwaita-dark";
-        color-scheme = "prefer-dark";
-      };
-    };
+  # Set dark mode as the default for GTK and Qt
+  environment.variables = {
+    GTK_THEME = "Adwaita-dark";          # For GTK apps
+    QT_QPA_PLATFORMTHEME = "qt5ct";     # For Qt apps
+    QT_STYLE_OVERRIDE = "Adwaita-dark"; # Apply Adwaita-dark to Qt apps
   };
-};
 
-    fonts.packages = with pkgs; [
-      (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "CascadiaCode" "CascadiaMono" ]; })
-    ];
+  fonts.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "CascadiaCode" "CascadiaMono" ]; })
+  ];
 
   environment.systemPackages = with pkgs; [
     fuzzel
@@ -39,5 +29,8 @@
     wayland-protocols
     wl-clipboard
     xwayland
+    lxappearance       # For GTK theme management
+    qt5ct              # For Qt theme management
   ];
 }
+
