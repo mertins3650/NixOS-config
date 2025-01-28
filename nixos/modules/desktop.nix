@@ -2,6 +2,7 @@
 
   services.xserver.enable = false;
   programs.hyprland.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
 
   # Set dark mode as the default for GTK and Qt
   environment.variables = {
