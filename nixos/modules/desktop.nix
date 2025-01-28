@@ -30,7 +30,7 @@
     wl-clipboard
     xwayland
     lxappearance       # For GTK theme management
-    qt5ct              # For Qt theme management
-  ];
+    libsForQt5.qt5ct
+    ];
 }
 
