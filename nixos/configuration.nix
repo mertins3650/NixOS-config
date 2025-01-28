@@ -1,5 +1,5 @@
 
-{ config, pkgs, ... }:
+{inputs,  config, pkgs, ... }:
 
 {
   nixpkgs.config.allowUnfree = true;
@@ -28,7 +28,15 @@
       ./modules/neovim.nix
       ./modules/terminal.nix
       ./modules/desktop.nix
+      inputs.home-manager.nixosModules.home-manager
     ];
+
+  home-manager = {
+    extraSpecialArgs = {enherit inputs;};
+            users = {
+                simonm = import ./home.nix;
+            }
+    };
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
