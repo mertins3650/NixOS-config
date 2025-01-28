@@ -94,6 +94,7 @@
   libpng
   protonup
   wget
+  pkgs.home-manager
   ];
 
   system.stateVersion = "24.11"; # Did you read the comment?
