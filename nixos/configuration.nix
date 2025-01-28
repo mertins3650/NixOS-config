@@ -31,12 +31,13 @@
       inputs.home-manager.nixosModules.home-manager
     ];
 
-  home-manager = {
-    extraSpecialArgs = {inherit inputs;};
-            users = {
-                simonm = import ./home.nix;
-            }
+      home-manager = {
+    extraSpecialArgs = { inherit inputs; };
+    users = {
+      simonm = import ./home.nix;
     };
+  };
+
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
