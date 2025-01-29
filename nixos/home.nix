@@ -66,6 +66,12 @@ programs.zoxide = {
           "${config.home.homeDirectory}/NixOS-config/nixos/dotfiles/nvim";
       recursive = true;
     };
+    fuzzel = {
+      source =
+        config.lib.file.mkOutOfStoreSymlink
+          "${config.home.homeDirectory}/NixOS-config/nixos/dotfiles/fuzzel";
+      recursive = true;
+    };
     hypr = {
       source =
         config.lib.file.mkOutOfStoreSymlink
