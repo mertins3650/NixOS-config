@@ -55,9 +55,9 @@ programs.zoxide = {
   };
 
 home.file = {
-    ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/NixOS-config/dotfiles/nvim";
-    ".config/hypr".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/NixOS-config/dotfiles/hypr";
-    ".config/fuzzel".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/NixOS-config/dotfiles/fuzzel";
+    ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/NixOS-config/dotfiles/nvim/";
+    ".config/hypr".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/NixOS-config/dotfiles/hypr/";
+    ".config/fuzzel".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/NixOS-config/dotfiles/fuzzel/";
 };
 
   home.sessionVariables = {
