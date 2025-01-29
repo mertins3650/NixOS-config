@@ -80,8 +80,6 @@ programs.zoxide = {
     };
   };
 
-
-
   home.sessionVariables = {
      EDITOR = "nvim";
   };
