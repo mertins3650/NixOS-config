@@ -9,7 +9,6 @@
     ripgrep
     tmux
     yazi
-    zoxide
   ];
 }
 

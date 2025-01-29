@@ -14,6 +14,7 @@
   home.packages = [
   pkgs.zsh
   pkgs.oh-my-zsh       
+  pkgs.zoxide
   ];
 
   programs.zsh = {
@@ -29,7 +30,10 @@
   };
 
 
-  programs.zoxide.enableZshIntegration = true;
+programs.zoxide = {
+    enable = true;
+    enableZshIntegration = true;
+};
 
   programs.git = {
     enable = true;
