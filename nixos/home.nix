@@ -11,6 +11,12 @@
   qt.style.name = "adwaita-dark";
   qt.style.package = pkgs.adwaita-qt;
 
+  home.packages = [
+  pkgs.oh-my-zsh       
+  pkgs.zsh
+
+  ];
+
   programs.zsh = {
     enable = true;
     ohMyZsh = {
@@ -25,8 +31,6 @@
     userEmail = "mertins99@gmail.com";
   };
 
-  home.packages = [
-  ];
 
   home.file = {
   };
