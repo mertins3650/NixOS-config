@@ -12,7 +12,6 @@
   qt.style.package = pkgs.adwaita-qt;
 
   home.packages = [
-  pkgs.oh-my-zsh       
   pkgs.zsh
 
   ];
