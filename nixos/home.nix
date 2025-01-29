@@ -27,6 +27,9 @@
       enable = true;
       theme = "robbyrussell";
         };
+    history.size = 10000;
+    history.ignoreAllDups = true;
+    history.path = "$HOME/.zsh_history";
   };
 
 

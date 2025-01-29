@@ -13,7 +13,6 @@ fonts.packages = with pkgs; [
 
   environment.systemPackages = with pkgs; [
     fuzzel
-    libsForQt5.dolphin
     hypridle
     hyprland
     hyprlock
