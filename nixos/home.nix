@@ -18,11 +18,18 @@
 
   programs.zsh = {
     enable = true;
-        oh-my-zsh = {
-        enable = true;
+    shellAliases = {
+        ls = "eza -1 --group-directories-first --icons";
+        cd = "z";
+        };
+    oh-my-zsh = {
+      enable = true;
       theme = "robbyrussell";
         };
   };
+
+
+  programs.zoxide.enableZshIntegration = true;
 
   programs.git = {
     enable = true;
