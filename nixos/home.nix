@@ -54,10 +54,8 @@ programs.zoxide = {
     userEmail = "mertins99@gmail.com";
   };
 
-  home.file = {
+  home.file = { ".config/nvim" = { source = config.lib.file.mkOutOfStoreSymlink "/home/simonm/NixOS-config/nixos/dotfiles/config/nvim"};
   };
-
-  home.file = { ".config/nvim" = { source = config.lib.file.mkOutOfStoreSymlink "/home/simonm/NixOS-config/nixos/dotfiles/config/nvim" };
 
 
   home.sessionVariables = {
