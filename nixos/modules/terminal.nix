@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  users.defaultUserShell = pkgs.zsh;
 
   environment.systemPackages = with pkgs; [
     eza

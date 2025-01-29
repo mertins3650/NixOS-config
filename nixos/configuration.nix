@@ -90,6 +90,7 @@
     isNormalUser = true;
     description = "Simon Mertins";
     extraGroups = [ "networkmanager" "wheel" "docker" ];
+    shell = pkgs.zsh;
     packages = with pkgs; [
     ];
   };
