@@ -15,7 +15,6 @@ fonts.packages = with pkgs; [
   environment.systemPackages = with pkgs; [
     fuzzel
     libsForQt5.dolphin
-    nerdfonts
     hypridle
     hyprland
     hyprlock
