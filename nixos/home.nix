@@ -67,7 +67,7 @@ bind -r l select-pane -R
 bind-key -r f run-shell "tmux neww ~/.local/scripts/tmux-sessionizer"
 bind-key -r g run-shell "tmux neww ~/.local/scripts/dev-commit"
   '';
-}
+};
 
 programs.zoxide = {
     enable = true;
