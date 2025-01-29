@@ -5,10 +5,17 @@
   home.homeDirectory = "/home/simonm";
   home.stateVersion = "24.11"; # Please read the comment before changing.
 
-    gtk.theme = {
-  name = "Adwaita-dark";
-  package = pkgs.gnome.gnome-themes-extra;
-};
+  gtk.theme = {
+       name = "Adwaita-dark";
+       package = pkgs.gnome.gnome-themes-extra;
+  };
+
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+        color-scheme = "prefer-dark";
+        };
+    };
+    
 
   qt.enable = true;
   qt.platformTheme.name = "gtk";
