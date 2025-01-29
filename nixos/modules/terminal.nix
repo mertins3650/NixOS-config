@@ -7,7 +7,6 @@
     fzf
     pkgs.ghostty
     ripgrep
-    tmux
     yazi
   ];
 }
