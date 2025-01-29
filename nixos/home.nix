@@ -55,12 +55,11 @@ programs.zoxide = {
   };
 
 home.file = {
-#    ".config/nvim".source = "${config.home.homeDirectory}/NixOS-config/dotfiles/nvim";
-#    ".config/hypr".source = "${config.home.homeDirectory}/NixOS-config/dotfiles/hypr";
-#    ".config/fuzzel".source = "${config.home.homeDirectory}/NixOS-config/dotfiles/fuzzel";
 };
 
-xdg.configFile.nvim.source = ./dotfiles/nvim;
+xdg.configFile."nvim".source = ./dotfiles/nvim;
+xdg.configFile."hypr".source = ./dotfiles/hypr;
+xdg.configFile."fuzzel".source = ./dotfiles/fuzzel;
 
 
   home.sessionVariables = {
