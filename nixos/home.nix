@@ -60,7 +60,7 @@ home.file = {
 #    ".config/fuzzel".source = "${config.home.homeDirectory}/NixOS-config/dotfiles/fuzzel";
 };
 
-xdg.configFile.nvim.source = ./nixos/dotfiles/nvim;
+xdg.configFile.nvim.source = ./dotfiles/nvim;
 
 
   home.sessionVariables = {
