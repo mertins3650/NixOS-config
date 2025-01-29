@@ -13,15 +13,17 @@
 
   home.packages = [
   pkgs.zsh
-
+  pkgs.oh-my-zsh       
   ];
 
   programs.zsh = {
     enable = true;
-    ohMyZsh = {
-      enable = true;
+  };
+
+  programs.zsh.ohMyZsh = {
+    enable = true;
+    plugins = [ "git" "python" "man" ];
       theme = "robbyrussell";
-    };
   };
 
   programs.git = {

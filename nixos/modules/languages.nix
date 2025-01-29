@@ -6,6 +6,7 @@
   clang
   gcc
   go
+  gopls
   lua
   luajit
   luarocks

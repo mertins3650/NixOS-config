@@ -8,7 +8,6 @@
     fzf
     pkgs.ghostty
     ripgrep
-    pkgs.oh-my-zsh       
     tmux
     yazi
     zoxide
