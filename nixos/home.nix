@@ -18,12 +18,10 @@
 
   programs.zsh = {
     enable = true;
-  };
-
-  programs.zsh.ohMyZsh = {
-    enable = true;
-    plugins = [ "git" "python" "man" ];
+        oh-my-zsh = {
+        enable = true;
       theme = "robbyrussell";
+        };
   };
 
   programs.git = {
