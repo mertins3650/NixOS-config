@@ -54,11 +54,11 @@ programs.zoxide = {
     userEmail = "mertins99@gmail.com";
   };
 
-  home.file = {
-    ".config/nvim".source = pkgs.lib.mkOutOfStoreSymlink "${config.home.homeDirectory}/NixOS-config/dotfiles/nvim";
-    ".config/hypr".source = pkgs.lib.mkOutOfStoreSymlink "${config.home.homeDirectory}/NixOS-config/dotfiles/hypr";
-    ".config/fuzzel".source = pkgs.lib.mkOutOfStoreSymlink "${config.home.homeDirectory}/NixOS-config/dotfiles/fuzzel";
-  };
+home.file = {
+    ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/NixOS-config/dotfiles/nvim";
+    ".config/hypr".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/NixOS-config/dotfiles/hypr";
+    ".config/fuzzel".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/NixOS-config/dotfiles/fuzzel";
+};
 
   home.sessionVariables = {
      EDITOR = "nvim";
