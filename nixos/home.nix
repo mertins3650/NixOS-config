@@ -11,6 +11,20 @@
   qt.style.name = "adwaita-dark";
   qt.style.package = pkgs.adwaita-qt;
 
+  programs.zsh = {
+    enable = true;
+    ohMyZsh = {
+      enable = true;
+      theme = "robbyrussell";
+    };
+  };
+
+  programs.git = {
+    enable = true;
+    userName = "Simon Mertins";
+    userEmail = "mertins99@gmail.com";
+  };
+
   home.packages = [
   ];
 
