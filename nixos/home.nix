@@ -80,11 +80,8 @@ programs.zoxide = {
     userEmail = "mertins99@gmail.com";
   };
 
-  #home.file = {
-  #  ".config/nvim" = {
-  #    source = config.lib.file.mkOutOfStoreSymlink /home/simonm/NixOS-config/nixos/dotfiles/config/nvim;
-  #  };
-  #};
+  home.file = {
+  };
 
     home.activation.createSymlink = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     rm -rf ~/.config/nvim
@@ -93,12 +90,6 @@ programs.zoxide = {
 
 
  xdg.configFile = {
-        #    nvim = {
-        #      source =
-        #        config.lib.file.mkOutOfStoreSymlink
-        #          "${config.home.homeDirectory}/NixOS-config/nixos/dotfiles/nvim";
-        #      recursive = true;
-        #    };
    fuzzel = {
       source =
         config.lib.file.mkOutOfStoreSymlink
