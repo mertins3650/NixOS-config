@@ -99,7 +99,7 @@ programs.zoxide = {
         #          "${config.home.homeDirectory}/NixOS-config/nixos/dotfiles/nvim";
         #      recursive = true;
         #    };
-        #    fuzzel = {
+   fuzzel = {
       source =
         config.lib.file.mkOutOfStoreSymlink
           "${config.home.homeDirectory}/NixOS-config/nixos/dotfiles/fuzzel";
