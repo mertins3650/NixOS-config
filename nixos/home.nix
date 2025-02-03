@@ -10,6 +10,7 @@
       pkgs.zsh
       pkgs.oh-my-zsh       
       pkgs.zoxide
+      pkgs.swaync
   ];
 
   programs.swaynotificationcenter = {
