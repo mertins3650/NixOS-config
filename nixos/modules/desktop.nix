@@ -18,6 +18,7 @@ fonts.packages = with pkgs; [
     hyprlock
     hyprpaper
     hyprshot
+    mako
     pavucontrol
     waybar
     wayland
