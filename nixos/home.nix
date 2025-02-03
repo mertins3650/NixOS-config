@@ -10,12 +10,11 @@
       pkgs.zsh
       pkgs.oh-my-zsh       
       pkgs.zoxide
-      pkgs.mako
   ];
 
-  services.mako = {
+  programs.swaynotificationcenter = {
     enable = true;
-    };
+  };
 
   gtk.theme = {
     name = "Adwaita-dark";
