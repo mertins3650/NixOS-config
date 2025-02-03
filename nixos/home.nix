@@ -10,7 +10,7 @@
       pkgs.zsh
       pkgs.oh-my-zsh       
       pkgs.zoxide
-      pkgs.swaync
+      pkgs.swaynotificationcenter
   ];
 
   gtk.theme = {
