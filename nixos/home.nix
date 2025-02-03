@@ -13,10 +13,6 @@
       pkgs.swaync
   ];
 
-  programs.swaynotificationcenter = {
-    enable = true;
-  };
-
   gtk.theme = {
     name = "Adwaita-dark";
     package = pkgs.gnome.gnome-themes-extra;
