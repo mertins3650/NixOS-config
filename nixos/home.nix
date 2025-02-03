@@ -10,7 +10,12 @@
       pkgs.zsh
       pkgs.oh-my-zsh       
       pkgs.zoxide
+      pkgs.mako
   ];
+
+  services.mako = {
+    enable = true;
+    };
 
   gtk.theme = {
     name = "Adwaita-dark";

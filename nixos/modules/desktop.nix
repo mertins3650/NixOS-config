@@ -4,9 +4,6 @@
   programs.hyprland.enable = true;
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
-  programs.mako = {
-    enable = true;
-  };
 
 fonts.packages = with pkgs; [
     nerd-fonts.fira-code
@@ -20,7 +17,6 @@ fonts.packages = with pkgs; [
     hyprlock
     hyprpaper
     hyprshot
-    mako
     pavucontrol
     waybar
     wayland
