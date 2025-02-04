@@ -12,6 +12,13 @@
       pkgs.zoxide
       pkgs.libnotify
       pkgs.swaynotificationcenter
+     (pkgs.writeShellScriptBin "nixrebuild" ''
+      if [ "$#" -ne 1 ]; then
+          echo "Usage: nixrebuild <input>"
+          exit 1
+      fi
+      sudo nixos-rebuild switch --flake ~/NixOS-config/#$1
+    '')
   ];
 
   gtk.theme = {
