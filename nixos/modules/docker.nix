@@ -35,7 +35,7 @@
         -d mysql:8.4";
       ExecStart = "${pkgs.docker}/bin/docker start mysql8";
       ExecStop = "${pkgs.docker}/bin/docker stop mysql8";
-      Restart = "on-failure"; # Only restart if it fails, not if removed
+      Restart = "on-failure";
     };
     wantedBy = [ "multi-user.target" ];
   };

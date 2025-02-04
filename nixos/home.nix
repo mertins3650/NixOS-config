@@ -88,7 +88,9 @@ programs.zoxide = {
 
     home.activation.createSymlink = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     rm -rf ~/.config/nvim
+    rm -rf ~/.local/scripts/tmux-sessionizer
     ln -s /home/simonm/NixOS-config/nixos/dotfiles/nvim ~/.config/nvim
+    ln -s /home/simonm/NixOS-config/nixos/dotfiles/scripts/tmux-sessionizer ~/.local/scripts/tmux-sessionizer
 '';
 
 
