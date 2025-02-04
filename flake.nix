@@ -21,10 +21,11 @@
       };
     in {
       nixosConfigurations = {
-        myNixos = nixpkgs.lib.nixosSystem {
+        oldlaptop = nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs system;};
           system = "x86_64-linux";
           modules = [
+            ./nixos/systems/oldlaptop.nix
             ./nixos/configuration.nix
           ];
         };

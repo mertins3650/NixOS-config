@@ -21,7 +21,6 @@
 
   imports =
     [ 
-      ./hardware-configuration.nix
       ./modules/cleanup.nix
       ./modules/docker.nix
       ./modules/languages.nix
