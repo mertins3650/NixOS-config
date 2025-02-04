@@ -83,19 +83,6 @@ programs.zoxide = {
     userEmail = "mertins99@gmail.com";
   };
 
-home.file.".local/bin/nixrebuild" = {
-  text = ''
-    #!/bin/sh
-    if [ "$#" -ne 1 ]; then
-        echo "Usage: nixrebuild <input>"
-        exit 1
-    fi
-    sudo nixos-rebuild switch --flake "$HOME/NixOS-config/#$1"
-  '';
-  executable = true;
-};
-
-
   home.file = {
   };
 
