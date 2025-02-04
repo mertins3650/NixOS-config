@@ -12,13 +12,6 @@
       pkgs.zoxide
       pkgs.libnotify
       pkgs.swaynotificationcenter
-     (pkgs.writeShellScriptBin "nixrebuild" ''
-      if [ "$#" -ne 1 ]; then
-          echo "Usage: nixrebuild <input>"
-          exit 1
-      fi
-      sudo nixos-rebuild switch --flake ~/NixOS-config/#$1
-    '')
   ];
 
   gtk.theme = {
@@ -89,6 +82,19 @@ programs.zoxide = {
     userName = "Simon Mertins";
     userEmail = "mertins99@gmail.com";
   };
+
+home.file.".local/bin/nixrebuild" = {
+  text = ''
+    #!/bin/sh
+    if [ "$#" -ne 1 ]; then
+        echo "Usage: nixrebuild <input>"
+        exit 1
+    fi
+    sudo nixos-rebuild switch --flake "$HOME/NixOS-config/#$1"
+  '';
+  executable = true;
+};
+
 
   home.file = {
   };
