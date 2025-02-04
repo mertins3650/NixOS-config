@@ -102,7 +102,8 @@ home.file.".local/bin/nixrebuild" = {
     home.activation.createSymlink = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     rm -rf ~/.config/nvim
     rm -rf ~/.local/scripts/tmux-sessionizer
-    mkdir -p /home/simonm/scripts
+    mkdir -p ~/.config/nvim
+    mkdir -p ~/.local/scripts
     ln -s /home/simonm/NixOS-config/nixos/dotfiles/nvim ~/.config/nvim
     ln -s /home/simonm/NixOS-config/nixos/dotfiles/scripts/tmux-sessionizer ~/.local/scripts/tmux-sessionizer
 '';
