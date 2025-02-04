@@ -36,6 +36,7 @@
     shellAliases = {
         ls = "eza -1 --group-directories-first --icons";
         cd = "z";
+        nixupdate = "sudo nixos-rebuild switch --flake";
         };
     oh-my-zsh = {
       enable = true;
