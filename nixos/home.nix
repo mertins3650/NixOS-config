@@ -10,7 +10,7 @@ in
     home.stateVersion = "24.11"; # Please read the comment before changing.
     
     home.packages = [
-        nixrebuildScript,
+        nixrebuildScript
         pkgs.tmux
         pkgs.zsh
         pkgs.oh-my-zsh       
