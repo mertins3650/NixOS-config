@@ -98,18 +98,20 @@ in
         ln -s /home/simonm/NixOS-config/nixos/dotfiles/scripts/tmux-sessionizer ~/.local/scripts/tmux-sessionizer
     '';
 
-    xdg.configFile = {
-        fuzzel = {
-            source = lib.file.mkOutOfStoreSymlink
-                "${config.home.homeDirectory}/NixOS-config/nixos/dotfiles/fuzzel";
-            recursive = true;
+     xdg.configFile = {
+       fuzzel = {
+          source =
+            config.lib.file.mkOutOfStoreSymlink
+              "${config.home.homeDirectory}/NixOS-config/nixos/dotfiles/fuzzel";
+          recursive = true;
         };
         hypr = {
-            source = lib.file.mkOutOfStoreSymlink
-                "${config.home.homeDirectory}/NixOS-config/nixos/dotfiles/hypr";
-            recursive = true;
+          source =
+            config.lib.file.mkOutOfStoreSymlink
+              "${config.home.homeDirectory}/NixOS-config/nixos/dotfiles/hypr";
+          recursive = true;
         };
-    };
+      };
 
     home.sessionVariables = {
         EDITOR = "nvim";
