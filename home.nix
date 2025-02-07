@@ -94,21 +94,21 @@ in
         rm -rf ~/.local/scripts/tmux-sessionizer
         mkdir -p ~/.config/nvim
         mkdir -p ~/.local/scripts
-        ln -s /home/simonm/NixOS-config/nixos/dotfiles/nvim/* ~/.config/nvim/
-        ln -s /home/simonm/NixOS-config/nixos/dotfiles/scripts/tmux-sessionizer ~/.local/scripts/tmux-sessionizer
+        ln -s /home/simonm/NixOS-config/dotfiles/nvim/* ~/.config/nvim/
+        ln -s /home/simonm/NixOS-config/dotfiles/scripts/tmux-sessionizer ~/.local/scripts/tmux-sessionizer
     '';
 
      xdg.configFile = {
        fuzzel = {
           source =
             config.lib.file.mkOutOfStoreSymlink
-              "${config.home.homeDirectory}/NixOS-config/nixos/dotfiles/fuzzel";
+              "${config.home.homeDirectory}/NixOS-config/dotfiles/fuzzel";
           recursive = true;
         };
         hypr = {
           source =
             config.lib.file.mkOutOfStoreSymlink
-              "${config.home.homeDirectory}/NixOS-config/nixos/dotfiles/hypr";
+              "${config.home.homeDirectory}/NixOS-config/dotfiles/hypr";
           recursive = true;
         };
       };

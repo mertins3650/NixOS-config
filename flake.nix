@@ -25,8 +25,8 @@
           specialArgs = {inherit inputs system;};
           system = "x86_64-linux";
           modules = [
-            ./nixos/systems/oldlaptop.nix
-            ./nixos/configuration.nix
+            ./systems/oldlaptop.nix
+            ./default.nix
           ];
         };
       };
