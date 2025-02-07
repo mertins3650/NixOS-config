@@ -26,7 +26,7 @@
           system = "x86_64-linux";
           modules = [
             ./systems/oldlaptop.nix
-            ./default.nix
+            ./systems/default.nix
           ];
         };
       };
