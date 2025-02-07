@@ -21,19 +21,19 @@
 
   imports =
     [ 
-      ./modules/cleanup.nix
-      ./modules/docker.nix
-      ./modules/languages.nix
-      ./modules/neovim.nix
-      ./modules/terminal.nix
-      ./modules/desktop.nix
+      ../modules/cleanup.nix
+      ../modules/docker.nix
+      ../modules/languages.nix
+      ../modules/neovim.nix
+      ../modules/terminal.nix
+      ../modules/desktop.nix
       inputs.home-manager.nixosModules.home-manager
     ];
 
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     users = {
-      simonm = import ./home.nix;
+      simonm = import ../home.nix;
     };
   };
 
