@@ -22,7 +22,6 @@ return {
 			local capabilities = require("blink.cmp").get_lsp_capabilities()
 			local lspconfig = require("lspconfig")
 
-			-- LSP Attach Function
 			vim.api.nvim_create_autocmd("LspAttach", {
 				group = vim.api.nvim_create_augroup("kickstart-lsp-attach", { clear = true }),
 				callback = function(event)
@@ -88,10 +87,10 @@ return {
 						},
 					},
 				},
-				nil_ls = {}, -- Add nil_ls for Nix
+				nil_ls = {},
+				gopls = {},
 			}
 
-			-- Setup each LSP
 			for server, config in pairs(servers) do
 				lspconfig[server].setup(vim.tbl_deep_extend("force", {
 					capabilities = capabilities,

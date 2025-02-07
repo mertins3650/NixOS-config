@@ -2,6 +2,7 @@
 
 let
     nixrebuildScript = import ./scripts/nixrebuild.nix { pkgs = pkgs; };
+    devcommitScipt = import ./scripts/dev-commit.nix { pkgs = pkgs; };
 in
 
 {
@@ -11,6 +12,7 @@ in
     
     home.packages = [
         nixrebuildScript
+        devcommitScipt
         pkgs.tmux
         pkgs.zsh
         pkgs.oh-my-zsh       
