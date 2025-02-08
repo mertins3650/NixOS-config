@@ -96,7 +96,7 @@ in
     };
 
     home.file = {};
-    home.file.".config/swaync/style.css".source = ../dotfiles/swaync/style.css;
+    home.file.".config/swaync/style.css".source = ./dotfiles/swaync/style.css;
 
 
     home.activation.createSymlink = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
@@ -125,6 +125,12 @@ in
 
     home.sessionVariables = {
         EDITOR = "nvim";
+    };
+
+      xdg.configFile = {
+    "swaync/style.css" = {
+      source = ../dotfiles/swaync/style.css;
+    };
     };
 
     programs.home-manager.enable = true;
