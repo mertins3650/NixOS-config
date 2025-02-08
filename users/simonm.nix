@@ -1,8 +1,8 @@
 { config, pkgs, lib, ... }:
 
 let
-    nixrebuildScript = import ./scripts/nixrebuild.nix { pkgs = pkgs; };
-    devcommitScipt = import ./scripts/dev-commit.nix { pkgs = pkgs; };
+    nixrebuildScript = import ../scripts/nixrebuild.nix { pkgs = pkgs; };
+    devcommitScipt = import ../scripts/dev-commit.nix { pkgs = pkgs; };
 in
 
 {
