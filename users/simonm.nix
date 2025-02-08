@@ -19,6 +19,7 @@ in
         pkgs.zoxide
         pkgs.libnotify
         pkgs.swaynotificationcenter
+        pkgs.nh
     ];
 
     gtk.theme = {
@@ -52,6 +53,11 @@ in
         history.ignoreAllDups = true;
         history.path = "$HOME/.zsh_history";
     };
+
+  programs.nh = {
+    enable = true;
+    flake = "/home/simonm/NixOS-config/";
+  };
 
     programs.tmux = {
         enable = true;
@@ -90,6 +96,8 @@ in
     };
 
     home.file = {};
+    home.file.".config/swaync/style.css".source = ../dotfiles/swaync/style.css;
+
 
     home.activation.createSymlink = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
         rm -rf ~/.config/nvim
@@ -117,7 +125,6 @@ in
 
     home.sessionVariables = {
         EDITOR = "nvim";
-        FLAKE = "/home/simonm/NixOS-config/";
     };
 
     programs.home-manager.enable = true;
