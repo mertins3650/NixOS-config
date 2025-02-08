@@ -33,7 +33,7 @@
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     users = {
-      simonm = import ../home.nix;
+      simonm = import ../users/simonm.nix;
     };
   };
 
@@ -95,6 +95,7 @@
   protonup
   wget
   pkgs.home-manager
+  nh
   ];
 
   system.stateVersion = "24.11"; # Did you read the comment?

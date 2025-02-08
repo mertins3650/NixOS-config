@@ -117,6 +117,7 @@ in
 
     home.sessionVariables = {
         EDITOR = "nvim";
+        FLAKE = "/home/simonm/NixOS-config/";
     };
 
     programs.home-manager.enable = true;

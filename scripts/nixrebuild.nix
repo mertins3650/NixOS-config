@@ -5,6 +5,5 @@ pkgs.writeShellScriptBin "nixrebuild" ''
         echo "Usage: nixrebuild <configuration>"
         exit 1
     fi
-    sudo nixos-rebuild switch --flake "$HOME/NixOS-config#$1"
+    sudo nh os switch -H "$1"
 ''
-
