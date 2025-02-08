@@ -96,7 +96,6 @@ in
     };
 
     home.file = {};
-    home.file.".config/swaync/style.css".source = ./dotfiles/swaync/style.css;
 
 
     home.activation.createSymlink = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
