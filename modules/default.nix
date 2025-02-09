@@ -1,5 +1,6 @@
 { ... }: {  
   imports = [
-    ./desktop/default.nix
+    ./desktop
+    ./neovim
   ];
 }

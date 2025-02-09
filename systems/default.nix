@@ -30,17 +30,11 @@
       inputs.home-manager.nixosModules.home-manager
     ];
 
-  home-manager = {
-    extraSpecialArgs = { inherit inputs; };
-    users = {
-      simonm = import ../users/simonm.nix;
-    };
-  };
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "nixos"; 
   networking.networkmanager.enable = true;
 
   time.timeZone = "Europe/Copenhagen";

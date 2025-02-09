@@ -10,7 +10,7 @@
         };
   };
 
-  outputs = { self, nixpkgs,... }@inputs:
+  outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -27,6 +27,12 @@
           modules = [
             ./systems/oldlaptop.nix
             ./systems/default.nix
+            home-manager.nixosModules.home-manager {
+              home-manager = {
+                extraSpecialArgs = { inherit inputs; };
+                users.simonm = import ../users/simonm.nix;
+              };
+            }
           ];
         };
       };
