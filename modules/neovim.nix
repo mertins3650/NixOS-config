@@ -1,10 +1,16 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 {
+  options = {
+    nvim.enable = lib.mkEnableOption "Enable Neovim";
+  };
 
-  environment.systemPackages = with pkgs; [
-  lazygit
-  neovim
-  pkgs.prettierd
-  stylua
-  ];
+  config = lib.mkIf config.nvim.enable {
+    environment.systemPackages = with pkgs; [
+      lazygit
+      neovim
+      prettierd
+      stylua
+    ];
+  };
 }
+

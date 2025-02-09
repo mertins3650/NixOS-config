@@ -30,6 +30,8 @@
       inputs.home-manager.nixosModules.home-manager
     ];
 
+  nvim.enable = true;
+
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     users = {

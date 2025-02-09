@@ -11,7 +11,6 @@
   luajit
   luarocks
   lua-language-server
-  nil
   nodejs_23
   python314
   rustc
