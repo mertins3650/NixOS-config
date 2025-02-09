@@ -37,29 +37,43 @@ in
     qt.platformTheme.name = "gtk";
     qt.style.name = "adwaita-dark";
     qt.style.package = pkgs.adwaita-qt;
-
-    programs.zsh = {
+    
+  programs = {
+    direnv = {
+      enable = true;
+      enableBashIntegration = true;
+      enableZshIntegration = true;
+      nix-direnv.enable = true;
+    };
+    nh = {
+      enable = true;
+      flake = "/home/simonm/NixOS-config/";
+    };
+    git = {
+        enable = true;
+        userName = "Simon Mertins";
+        userEmail = "mertins99@gmail.com";
+    };
+    zoxide = {
+        enable = true;
+        enableZshIntegration = true;
+    };
+    zsh = {
         enable = true;
         shellAliases = {
             ls = "eza -1 --group-directories-first --icons";
             cd = "z";
-            nixupdate = "sudo nixos-rebuild switch --flake";
         };
         oh-my-zsh = {
             enable = true;
             theme = "robbyrussell";
+            plugins = ["direnv"];
         };
         history.size = 10000;
         history.ignoreAllDups = true;
         history.path = "$HOME/.zsh_history";
     };
-
-  programs.nh = {
-    enable = true;
-    flake = "/home/simonm/NixOS-config/";
-  };
-
-    programs.tmux = {
+    tmux = {
         enable = true;
         extraConfig = ''
             set -g default-terminal "tmux-256color"
@@ -83,20 +97,9 @@ in
             bind-key -r g run-shell "tmux neww ~/.local/scripts/dev-commit"
         '';
     };
-
-    programs.zoxide = {
-        enable = true;
-        enableZshIntegration = true;
-    };
-
-    programs.git = {
-        enable = true;
-        userName = "Simon Mertins";
-        userEmail = "mertins99@gmail.com";
-    };
+  };
 
     home.file = {};
-
 
     home.activation.createSymlink = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
         rm -rf ~/.config/nvim
