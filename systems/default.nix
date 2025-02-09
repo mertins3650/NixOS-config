@@ -21,16 +21,9 @@
 
   imports =
     [ 
-      ../modules/cleanup.nix
-      ../modules/docker.nix
-      ../modules/languages.nix
-      ../modules/neovim.nix
-      ../modules/terminal.nix
-      ../modules/desktop.nix
+      ../modules
       inputs.home-manager.nixosModules.home-manager
     ];
-
-  nvim.enable = true;
 
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
