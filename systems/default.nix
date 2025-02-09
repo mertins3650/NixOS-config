@@ -21,14 +21,9 @@
 
   imports =
     [ 
-      ../modules/cleanup.nix
-      ../modules/docker.nix
-      ../modules/languages.nix
-      ../modules/terminal.nix
       ../modules
       inputs.home-manager.nixosModules.home-manager
     ];
-
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
