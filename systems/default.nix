@@ -89,7 +89,7 @@
   libpng
   protonup
   wget
-  pkgs.home-manager
+  home-manager
   qmk
   ];
 
