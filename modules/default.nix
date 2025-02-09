@@ -5,6 +5,7 @@
     ./docker
     ./languages
     ./neovim
+    ./steam
     ./terminal
   ];
 }
