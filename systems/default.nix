@@ -24,7 +24,6 @@
       ../modules/cleanup.nix
       ../modules/docker.nix
       ../modules/languages.nix
-      ../modules/neovim.nix
       ../modules/terminal.nix
       ../modules
       inputs.home-manager.nixosModules.home-manager
