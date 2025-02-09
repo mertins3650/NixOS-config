@@ -7,7 +7,7 @@
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
-        };
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
@@ -22,15 +22,15 @@
     in {
       nixosConfigurations = {
         oldlaptop = nixpkgs.lib.nixosSystem {
-          specialArgs = {inherit inputs system;};
+          specialArgs = { inherit inputs system self; }; # Added self here
           system = "x86_64-linux";
           modules = [
             ./systems/oldlaptop.nix
             ./systems/default.nix
             home-manager.nixosModules.home-manager {
               home-manager = {
-                extraSpecialArgs = { inherit inputs; };
-                users.simonm = import ../users/simonm.nix;
+                extraSpecialArgs = { inherit inputs self; }; 
+                users.simonm = import "${self}/users/simonm.nix";
               };
             }
           ];
