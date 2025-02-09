@@ -11,6 +11,7 @@
   imports =
     [ 
       ./modules
+      ../modules
       inputs.home-manager.nixosModules.home-manager
     ];
 
