@@ -1,7 +1,7 @@
 { pkgs ? import <nixpkgs> {}}:
 
 pkgs.mkShell {
-  packages = [
-    pkgs.nil
+  packages =  with pkgs; [
+    nil
   ];
 }

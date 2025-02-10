@@ -1,8 +1,8 @@
 { config, pkgs, lib, ... }:
 
 let
-    nixrebuildScript = import ../scripts/nixrebuild.nix { pkgs = pkgs; };
-    devcommitScipt = import ../scripts/dev-commit.nix { pkgs = pkgs; };
+    devcommitScript = import ../scripts/dev-commit.nix { pkgs = pkgs; };
+    tmux-sessionizerScript = import ../scripts/tmux-sessionizer.nix { pkgs = pkgs; };
 in
 
 {
@@ -11,8 +11,8 @@ in
     home.stateVersion = "24.11"; # Please read the comment before changing.
     
     home.packages = [
-        nixrebuildScript
-        devcommitScipt
+        devcommitScript
+        tmux-sessionizerScript 
         pkgs.tmux
         pkgs.zsh
         pkgs.oh-my-zsh       
@@ -93,7 +93,7 @@ in
             bind -r h select-pane -L
             bind -r l select-pane -R
 
-            bind-key -r f run-shell "tmux neww ~/.local/scripts/tmux-sessionizer"
+            bind-key -r f run-shell "tmux neww tmux-sessionizer"
             bind-key -r g run-shell "tmux neww ~/.local/scripts/dev-commit"
         '';
     };
