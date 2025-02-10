@@ -8,7 +8,7 @@ in
 {
   imports =
     [ 
-      ./modules
+      ./modules/defualt.nix
     ];
 
     home.username = "simonm";
