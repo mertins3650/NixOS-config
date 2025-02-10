@@ -6,6 +6,11 @@ let
 in
 
 {
+  imports =
+    [ 
+      ./modules
+    ];
+
     home.username = "simonm";
     home.homeDirectory = "/home/simonm";
     home.stateVersion = "24.11"; # Please read the comment before changing.
