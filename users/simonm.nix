@@ -94,7 +94,7 @@ in
             bind -r l select-pane -R
 
             bind-key -r f run-shell "tmux neww tmux-sessionizer"
-            bind-key -r g run-shell "tmux neww ~/.local/scripts/dev-commit"
+            bind-key -r g run-shell "tmux neww dev-commit"
         '';
     };
   };
@@ -103,11 +103,8 @@ in
 
     home.activation.createSymlink = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
         rm -rf ~/.config/nvim
-        rm -rf ~/.local/scripts/tmux-sessionizer
         mkdir -p ~/.config/nvim
-        mkdir -p ~/.local/scripts
         ln -s /home/simonm/NixOS-config/dotfiles/nvim/* ~/.config/nvim/
-        ln -s /home/simonm/NixOS-config/dotfiles/scripts/tmux-sessionizer ~/.local/scripts/tmux-sessionizer
     '';
 
      xdg.configFile = {
@@ -129,10 +126,10 @@ in
         EDITOR = "nvim";
     };
 
-      xdg.configFile = {
-    "swaync/style.css" = {
-      source = ../dotfiles/swaync/style.css;
-    };
+    xdg.configFile = {
+      "swaync/style.css" = {
+        source = ../dotfiles/swaync/style.css;
+      };
     };
 
     programs.home-manager.enable = true;
