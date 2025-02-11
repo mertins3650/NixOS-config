@@ -18,4 +18,6 @@ pkgs.writeShellScriptBin "devinit" ''
   EOF
     fi
   }
+
+  nixify
 ''
