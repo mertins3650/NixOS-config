@@ -18,29 +18,12 @@ in
     home.packages = [
         devcommitScript
         tmux-sessionizerScript 
-        pkgs.zsh
-        pkgs.oh-my-zsh       
         pkgs.zoxide
         pkgs.libnotify
         pkgs.swaynotificationcenter
         pkgs.nh
     ];
 
-    gtk.theme = {
-        name = "Adwaita-dark";
-        package = pkgs.gnome.gnome-themes-extra;
-    };
-
-    dconf.settings = {
-        "org/gnome/desktop/interface" = {
-            color-scheme = "prefer-dark";
-        };
-    };
-
-    qt.enable = true;
-    qt.platformTheme.name = "gtk";
-    qt.style.name = "adwaita-dark";
-    qt.style.package = pkgs.adwaita-qt;
     
   programs = {
     direnv = {
@@ -62,30 +45,10 @@ in
         enable = true;
         enableZshIntegration = true;
     };
-    zsh = {
-        enable = true;
-        shellAliases = {
-            ls = "eza -1 --group-directories-first --icons";
-            cd = "z";
-        };
-        oh-my-zsh = {
-            enable = true;
-            theme = "robbyrussell";
-            plugins = ["direnv"];
-        };
-        history.size = 10000;
-        history.ignoreAllDups = true;
-        history.path = "$HOME/.zsh_history";
-    };
   };
 
     home.file = {};
 
-    home.activation.createSymlink = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-        rm -rf ~/.config/nvim
-        mkdir -p ~/.config/nvim
-        ln -s /home/simonm/NixOS-config/dotfiles/nvim/* ~/.config/nvim/
-    '';
 
      xdg.configFile = {
        fuzzel = {

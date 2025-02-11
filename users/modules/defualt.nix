@@ -1,6 +1,8 @@
 { ... }: {  
   imports = [
+    ./neovim
+    ./theme
     ./tmux
-    ./flatpak
+    ./zsh
   ];
 }

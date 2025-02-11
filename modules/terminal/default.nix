@@ -1,11 +1,10 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
-
   environment.systemPackages = with pkgs; [
     eza
     fzf
-    pkgs.ghostty
+    ghostty
     ripgrep
     yazi
   ];
