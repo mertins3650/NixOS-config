@@ -9,6 +9,7 @@
     yazi
     clang
     gcc
+    luajit
   ];
 }
 

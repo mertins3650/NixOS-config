@@ -5,7 +5,6 @@
   lazygit
   neovim
   lua
-  luajit
   luarocks
   lua-language-server
   ];
