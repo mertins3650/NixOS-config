@@ -7,6 +7,8 @@
     ghostty
     ripgrep
     yazi
+    clang
+    gcc
   ];
 }
 

@@ -4,8 +4,6 @@
   home.packages= with pkgs; [
   lazygit
   neovim
-  clang
-  gcc
   lua
   luajit
   luarocks
