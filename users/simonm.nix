@@ -3,7 +3,7 @@
 let
     devcommitScript = import ../scripts/dev-commit.nix { pkgs = pkgs; };
     tmux-sessionizerScript = import ../scripts/tmux-sessionizer.nix { pkgs = pkgs; };
-    devinitScript = import ../scripts/devinit.nixx { pkgs = pkgs; };
+    devinitScript = import ../scripts/devinit.nix { pkgs = pkgs; };
 in
 
 {
