@@ -3,6 +3,7 @@
 let
     devcommitScript = import ../scripts/dev-commit.nix { pkgs = pkgs; };
     tmux-sessionizerScript = import ../scripts/tmux-sessionizer.nix { pkgs = pkgs; };
+    devinitScript = import ../scripts/devinit.nixx { pkgs = pkgs; };
 in
 
 {
@@ -11,19 +12,19 @@ in
       ./modules/defualt.nix
     ];
 
-    home.username = "simonm";
-    home.homeDirectory = "/home/simonm";
-    home.stateVersion = "24.11"; # Please read the comment before changing.
-    
-    home.packages = [
-        devcommitScript
-        tmux-sessionizerScript 
-        pkgs.zoxide
-        pkgs.libnotify
-        pkgs.swaynotificationcenter
-        pkgs.nh
-    ];
-
+  home.username = "simonm";
+  home.homeDirectory = "/home/simonm";
+  home.stateVersion = "24.11"; # Please read the comment before changing.
+  
+  home.packages = [
+    devinitScript
+    devcommitScript
+    tmux-sessionizerScript 
+    pkgs.zoxide
+    pkgs.libnotify
+    pkgs.swaynotificationcenter
+    pkgs.nh
+  ];
     
   programs = {
     direnv = {
@@ -47,34 +48,32 @@ in
     };
   };
 
-    home.file = {};
+  home.file = {};
 
+  xdg.configFile = {
+    fuzzel = {
+       source =
+         config.lib.file.mkOutOfStoreSymlink
+           "${config.home.homeDirectory}/NixOS-config/dotfiles/fuzzel";
+       recursive = true;
+     };
+     hypr = {
+       source =
+         config.lib.file.mkOutOfStoreSymlink
+           "${config.home.homeDirectory}/NixOS-config/dotfiles/hypr";
+       recursive = true;
+     };
+  };
 
-     xdg.configFile = {
-       fuzzel = {
-          source =
-            config.lib.file.mkOutOfStoreSymlink
-              "${config.home.homeDirectory}/NixOS-config/dotfiles/fuzzel";
-          recursive = true;
-        };
-        hypr = {
-          source =
-            config.lib.file.mkOutOfStoreSymlink
-              "${config.home.homeDirectory}/NixOS-config/dotfiles/hypr";
-          recursive = true;
-        };
-      };
-
-    home.sessionVariables = {
-        EDITOR = "nvim";
+  xdg.configFile = {
+    "swaync/style.css" = {
+      source = ../dotfiles/swaync/style.css;
     };
+  };
 
-    xdg.configFile = {
-      "swaync/style.css" = {
-        source = ../dotfiles/swaync/style.css;
-      };
-    };
+  home.sessionVariables = {
+    EDITOR = "nvim";
+  };
 
-    programs.home-manager.enable = true;
+  programs.home-manager.enable = true;
 }
-

@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ pkgs, ... }: {
 
   services.xserver.enable = false;
   programs.hyprland.enable = true;
@@ -13,7 +13,6 @@ fonts.packages = with pkgs; [
   environment.systemPackages = with pkgs; [
     fuzzel
     hypridle
-    hyprland
     hyprlock
     hyprpaper
     hyprshot
@@ -23,7 +22,7 @@ fonts.packages = with pkgs; [
     wayland-protocols
     wl-clipboard
     xwayland
-    lxappearance       # For GTK theme management
+    lxappearance       
     libsForQt5.qt5ct
     ];
 }
