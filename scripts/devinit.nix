@@ -12,7 +12,7 @@ pkgs.writeShellScriptBin "devinit" ''
 
   pkgs.mkShell {
     packages = with pkgs; [
-
+    nil
     ];
   }
   EOF
