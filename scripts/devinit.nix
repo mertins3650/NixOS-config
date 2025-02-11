@@ -1,9 +1,21 @@
 { pkgs }:
 
 pkgs.writeShellScriptBin "devinit" ''
-  pushd ~/NixOS-config/
-  git add .
-  git commit -m 'automated dev commit'
-  git push
-  popd
+  nixify() {
+    if [ ! -e ./.envrc ]; then
+      echo "use nix" > .envrc
+      direnv allow
+    fi
+    if [ ! -e shell.nix ]; then
+      cat > shell.nix <<'EOF'
+  { pkgs ? import <nixpkgs> {} }:
+
+  pkgs.mkShell {
+    packages = with pkgs; [
+
+    ];
+  }
+  EOF
+    fi
+  }
 ''
