@@ -51,29 +51,21 @@ in
   home.file = {};
 
   xdg.configFile = {
-    fuzzel = {
-       source =
-         config.lib.file.mkOutOfStoreSymlink
-           "${config.home.homeDirectory}/NixOS-config/dotfiles/fuzzel";
-       recursive = true;
-     };
-     hypr = {
-       source =
-         config.lib.file.mkOutOfStoreSymlink
-           "${config.home.homeDirectory}/NixOS-config/dotfiles/hypr";
-       recursive = true;
-     };
-     ghostty = {
-       source =
-         config.lib.file.mkOutOfStoreSymlink
-           "${config.home.homeDirectory}/NixOS-config/dotfiles/ghostty";
-       recursive = true;
-     };
-  };
-
-  xdg.configFile = {
     "swaync/style.css" = {
       source = ../dotfiles/swaync/style.css;
+    };
+    "ghostty/config".text = builtins.readFile ../dotfiles/ghostty/config;
+    fuzzel = {
+      source =
+        config.lib.file.mkOutOfStoreSymlink
+        "${config.home.homeDirectory}/NixOS-config/dotfiles/fuzzel";
+      recursive = true;
+    };
+    hypr = {
+      source =
+        config.lib.file.mkOutOfStoreSymlink
+        "${config.home.homeDirectory}/NixOS-config/dotfiles/hypr";
+      recursive = true;
     };
   };
 
