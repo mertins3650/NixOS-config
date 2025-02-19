@@ -22,10 +22,24 @@
     in {
       nixosConfigurations = {
         oldlaptop = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs system self; }; # Added self here
+          specialArgs = { inherit inputs system self; }; 
           system = "x86_64-linux";
           modules = [
             ./systems/oldlaptop.nix
+            ./systems/default.nix
+            home-manager.nixosModules.home-manager {
+              home-manager = {
+                extraSpecialArgs = { inherit inputs self; }; 
+                users.simonm = import "${self}/users/simonm.nix";
+              };
+            }
+          ];
+        };
+        zenbook = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs system self; };
+          system = "x86_64-linux";
+          modules = [
+            ./systems/zenbook.nix
             ./systems/default.nix
             home-manager.nixosModules.home-manager {
               home-manager = {

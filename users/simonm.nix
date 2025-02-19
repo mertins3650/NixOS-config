@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, ... }:
 
 let
     devcommitScript = import ../scripts/dev-commit.nix { pkgs = pkgs; };
@@ -14,7 +14,7 @@ in
 
   home.username = "simonm";
   home.homeDirectory = "/home/simonm";
-  home.stateVersion = "24.11"; # Please read the comment before changing.
+  home.stateVersion = "24.11"; 
   
   home.packages = [
     devinitScript
@@ -61,6 +61,12 @@ in
        source =
          config.lib.file.mkOutOfStoreSymlink
            "${config.home.homeDirectory}/NixOS-config/dotfiles/hypr";
+       recursive = true;
+     };
+     ghostty = {
+       source =
+         config.lib.file.mkOutOfStoreSymlink
+           "${config.home.homeDirectory}/NixOS-config/dotfiles/ghostty";
        recursive = true;
      };
   };
