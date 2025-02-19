@@ -6,7 +6,7 @@
   go
   gopls
   nodejs_23
-  python314
+  python3
   rustc
   rust-analyzer
   typescript
