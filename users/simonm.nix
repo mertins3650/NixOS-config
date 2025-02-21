@@ -24,7 +24,6 @@ in
     pkgs.libnotify
     pkgs.swaynotificationcenter
     pkgs.nh
-    pkgs.wofi
   ];
     
   programs = {
