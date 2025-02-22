@@ -15,9 +15,9 @@ fonts.packages = with pkgs; [
       wrapperFeatures.gtk = true;
     };
   };
-  services.swayidle.enable = true;
 
   environment.systemPackages = with pkgs; [
+    swayidle
     swaylock
     fuzzel
     hypridle
