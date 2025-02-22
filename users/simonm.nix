@@ -51,9 +51,6 @@ in
   home.file = {};
 
   xdg.configFile = {
-    "wofi/style.css" = {
-      source = ../dotfiles/wofi/style.css;
-    };
     "swaync/style.css" = {
       source = ../dotfiles/swaync/style.css;
     };
