@@ -14,13 +14,11 @@ fonts.packages = with pkgs; [
       enable = true;
       wrapperFeatures.gtk = true;
     };
-    swaylock = {
-      enable = true;
-    };
   };
   services.swayidle.enable = true;
 
   environment.systemPackages = with pkgs; [
+    swaylock
     fuzzel
     hypridle
     hyprlock
