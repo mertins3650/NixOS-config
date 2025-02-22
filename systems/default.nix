@@ -22,7 +22,7 @@
   networking.networkmanager.enable = true;
 
   services.printing.enable = true;
-  services.polkit.enable = true;
+  security.polkit.enable = true;
 
   system.stateVersion = "24.11"; # Did you read the comment?
 
