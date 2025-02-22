@@ -1,8 +1,12 @@
 { ... }:
 {
-  wayland.windowManager.Sway = {
-    enable = true;
+  programs = {
+    sway = {
+      enable = true;
+    };
+    swaylock = {
+      enable = true;
+    };
   };
   services.swayidle.enable = true;
-  programs.swaylock.enable = true;
 }
