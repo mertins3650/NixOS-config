@@ -1,9 +1,9 @@
 { ... }:
 {
+  wayland.windowManager.sway = {
+    enable = true;
+  };
   programs = {
-    sway = {
-      enable = true;
-    };
     swaylock = {
       enable = true;
     };
