@@ -9,6 +9,16 @@ fonts.packages = with pkgs; [
     nerd-fonts.fira-code
     nerd-fonts.droid-sans-mono
 ];
+  programs = {
+    sway = {
+      enable = true;
+      wrapperFeatures.gtk = true;
+    };
+    swaylock = {
+      enable = true;
+    };
+  };
+  services.swayidle.enable = true;
 
   environment.systemPackages = with pkgs; [
     fuzzel
