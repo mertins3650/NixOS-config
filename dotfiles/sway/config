@@ -13,7 +13,7 @@ set $down j
 set $up k
 set $right l
 #Standard apps
-set $term $HOME/.local/bin/ghostty
+set $term ghostty
 set $menu exec fuzzel
 
 #input options
