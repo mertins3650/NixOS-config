@@ -6,7 +6,8 @@
     lazydocker
   ];
 
-  programs.docker = {
+
+  virtualisation.docker = {
     enable = true;
     daemon = {
       settings = {
