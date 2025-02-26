@@ -1,7 +1,7 @@
 { ... }: {  
   imports = [
     ./cleanup
-    ./docker
+    ./desktop
     ./languages
     ./steam
     ./terminal
