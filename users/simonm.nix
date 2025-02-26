@@ -20,6 +20,7 @@ in
     devinitScript
     devcommitScript
     tmux-sessionizerScript 
+    pkgs.gh
     pkgs.zoxide
     pkgs.libnotify
     pkgs.swaynotificationcenter

@@ -13,7 +13,6 @@
   curl
   jq
   git
-  gh
   libpng
   protonup
   wget
