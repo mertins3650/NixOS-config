@@ -64,12 +64,6 @@ in
         "${config.home.homeDirectory}/NixOS-config/dotfiles/fuzzel";
       recursive = true;
     };
-    hypr = {
-      source =
-        config.lib.file.mkOutOfStoreSymlink
-        "${config.home.homeDirectory}/NixOS-config/dotfiles/hypr";
-      recursive = true;
-    };
     waybar = {
       source =
         config.lib.file.mkOutOfStoreSymlink

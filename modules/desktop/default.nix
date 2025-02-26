@@ -1,7 +1,7 @@
 { pkgs, ... }: {
 
   services.xserver.enable = false;
-  services.xserver.displayManager.gdm.enable = true;
+ services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
 fonts.packages = with pkgs; [
