@@ -1,6 +1,5 @@
 { ... }: {  
   imports = [
-    ./docker
     ./neovim
     ./theme
     ./tmux
