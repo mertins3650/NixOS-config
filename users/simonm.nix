@@ -55,6 +55,8 @@ in
       source = ../dotfiles/swaync/style.css;
     };
     "ghostty/config".text = builtins.readFile ../dotfiles/ghostty/config;
+    "sway/config".text = builtins.readFile ../dotfiles/sway/config;
+    "sway/catppuccin-mocha".text = builtins.readFile ../dotfiles/sway/catppuccin-mocha;
     fuzzel = {
       source =
         config.lib.file.mkOutOfStoreSymlink
@@ -65,6 +67,12 @@ in
       source =
         config.lib.file.mkOutOfStoreSymlink
         "${config.home.homeDirectory}/NixOS-config/dotfiles/hypr";
+      recursive = true;
+    };
+    waybar = {
+      source =
+        config.lib.file.mkOutOfStoreSymlink
+        "${config.home.homeDirectory}/NixOS-config/dotfiles/waybar";
       recursive = true;
     };
   };
