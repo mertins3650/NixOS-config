@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, lib,  pkgs, ... }:
 
 let
     devcommitScript = import ../scripts/dev-commit.nix { pkgs = pkgs; };
@@ -63,12 +63,6 @@ in
         "${config.home.homeDirectory}/NixOS-config/dotfiles/fuzzel";
       recursive = true;
     };
-    hypr = {
-      source =
-        config.lib.file.mkOutOfStoreSymlink
-        "${config.home.homeDirectory}/NixOS-config/dotfiles/hypr";
-      recursive = true;
-    };
     waybar = {
       source =
         config.lib.file.mkOutOfStoreSymlink
@@ -76,6 +70,12 @@ in
       recursive = true;
     };
   };
+
+  home.activation.createSymlink = lib.hm.dag.entryAfter [ "hyprwrite" ] ''
+      rm -rf ~/.config/hypr
+      mkdir -p ~/.config/hypr
+      ln -s /home/simonm/NixOS-config/dotfiles/hypr/* ~/.config/hypr/
+  '';
 
   home.sessionVariables = {
     EDITOR = "nvim";
