@@ -15,6 +15,7 @@
   jq
   git
   libpng
+  libsecret
   protonup
   wget
   home-manager
