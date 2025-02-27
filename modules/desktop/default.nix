@@ -6,7 +6,8 @@
   #services.xserver.desktopManager.gnome.enable = true;
   services.xserver.desktopManager.gnome.enable = false;
   services.gnome.gnome-keyring.enable = true;
-  security.pam.services.sway.enableGnomeKeyring = true;
+  security.pam.services.gdm.enableGnomeKeyring = true;
+  security.pam.services.gdm-password.enableGnomeKeyring = true;
 
   fonts.packages = with pkgs; [
       nerd-fonts.fira-code
