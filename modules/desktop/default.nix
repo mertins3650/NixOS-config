@@ -5,6 +5,7 @@
   programs.hyprland.enable = true;
   services.xserver.desktopManager.gnome.enable = false;
   services.gnome.gnome-keyring.enable = true;
+  security.pam.services.hyprland.enableGnomeKeyring = true;
   security.pam.services.gdm.enableGnomeKeyring = true;
   security.pam.services.gdm-password.enableGnomeKeyring = true;
 
