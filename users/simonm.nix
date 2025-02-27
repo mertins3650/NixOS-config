@@ -57,6 +57,12 @@ in
     "ghostty/config".text = builtins.readFile ../dotfiles/ghostty/config;
     "sway/config".text = builtins.readFile ../dotfiles/sway/config;
     "sway/catppuccin-mocha".text = builtins.readFile ../dotfiles/sway/catppuccin-mocha;
+    hypr = {
+      source =
+        config.lib.file.mkOutOfStoreSymlink
+        "${config.home.homeDirectory}/NixOS-config/dotfiles/hypr";
+      recursive = true;
+    };
     fuzzel = {
       source =
         config.lib.file.mkOutOfStoreSymlink
