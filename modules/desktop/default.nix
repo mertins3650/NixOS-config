@@ -1,13 +1,15 @@
 { pkgs, ... }: {
 
   services.xserver.enable = false;
- services.xserver.displayManager.gdm.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
+  services.gnome.gnome-keyring.enable = true;
+  security.pam.services.sway.enableGnomeKeyring = true;
 
-fonts.packages = with pkgs; [
-    nerd-fonts.fira-code
-    nerd-fonts.droid-sans-mono
-];
+  fonts.packages = with pkgs; [
+      nerd-fonts.fira-code
+      nerd-fonts.droid-sans-mono
+  ];
   programs = {
     sway = {
       enable = true;
