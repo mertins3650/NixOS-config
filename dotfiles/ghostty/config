@@ -4,6 +4,6 @@ window-decoration = false
 theme = rose-pine-moon
 background = 111111
 command = tmux
-font-size = 15
+font-size = 16
 font-feature = -liga
 font-family = "CaskaydiaCove Nerd Font Mono"
