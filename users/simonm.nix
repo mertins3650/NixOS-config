@@ -71,11 +71,13 @@ in
     };
   };
 
-  home.activation.createSymlink = lib.hm.dag.entryAfter [ "hyprwrite" ] ''
-      rm -rf ~/.config/hypr
-      mkdir -p ~/.config/hypr
-      ln -s /home/simonm/NixOS-config/dotfiles/hypr/* ~/.config/hypr/
+  home.activation.createSymlink = ''
+    rm -rf ~/.config/hypr ~/.config/nvim
+    mkdir -p ~/.config/hypr ~/.config/nvim
+    ln -s /home/simonm/NixOS-config/dotfiles/hypr/* ~/.config/hypr/
+    ln -s /home/simonm/NixOS-config/dotfiles/nvim/* ~/.config/nvim/
   '';
+
 
   home.sessionVariables = {
     EDITOR = "nvim";
