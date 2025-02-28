@@ -11,7 +11,6 @@
 
   environment.systemPackages = with pkgs; [
   curl
-  gh
   jq
   git
   libpng

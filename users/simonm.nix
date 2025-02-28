@@ -21,6 +21,7 @@ in
     devcommitScript
     tmux-sessionizerScript 
     pkgs.zoxide
+    pkgs.gh
     pkgs.libnotify
     pkgs.swaynotificationcenter
     pkgs.nh
