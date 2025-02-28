@@ -40,8 +40,6 @@ in
     };
     git = {
         enable = true;
-        userName = "Simon Mertins";
-        userEmail = "mertins99@gmail.com";
     };
     zoxide = {
         enable = true;
