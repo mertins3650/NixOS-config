@@ -25,16 +25,16 @@ input "type:pointer" accel_profile flat
 #??
 include /etc/sway/config-vars.d/*
 
-output * bg $HOME/dev/misc/backgrounds/shaded_landscape.png fill
+output * bg $HOME/NixOS-config/misc/backgrounds/better_shaded_landscape.jpg fill
 default_border pixel 4
 bindsym $mod+Shift+f exec swaymsg output eDP-1 enable
 bindsym $mod+Shift+d exec swaymsg output eDP-1 disable
 
 #Locksreen
 exec_always swayidle -w \
-    timeout 300 'swaylock -f --image $HOME/NixOS-config/misc/backgrounds/shaded_landscape.png' \
+    timeout 300 'swaylock -f --image $HOME/NixOS-config/misc/backgrounds/better_shaded_landscape.jpg' \
     timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-    before-sleep 'swaylock -f --image $HOME/NixOS-config/misc/backgrounds/shaded_landscape.png'
+    before-sleep 'swaylock -f --image $HOME/NixOS-config/misc/backgrounds/better_shaded_landscape.jpg'
 bindsym $mod+Mod1+l exec swaylock --image $HOME/NixOS-config/misc/backgrounds/shaded_landscape.png 
 
 ### Key bindings
