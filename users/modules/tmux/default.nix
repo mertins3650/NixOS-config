@@ -5,8 +5,8 @@
     tmux = {
         enable = true;
         extraConfig = ''
-            set-option -g default-terminal "xterm-256color"
-            set-option -ga terminal-overrides ",*:colors=256"
+            set-option -g default-terminal "xterm-16color"
+            set-option -ga terminal-overrides ",*:colors=16"
             set -s escape-time 0
 
             unbind C-b
@@ -14,7 +14,6 @@
             bind-key C-a send-prefix
             set -g status-style 'bg=#333333 fg=#5eacd3'
 
-            bind r source-file ~/.tmux.conf
             set -g base-index 1
 
             bind -r ^ last-window

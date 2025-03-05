@@ -1,22 +1,16 @@
 function ColorMyPencils(color)
-	--color = color or "catppuccin-mocha"
-	color = color or "vague"
+	color = color or "catppuccin-frappe"
+	--color = color or "gruvbuddy"
 	vim.cmd.colorscheme(color)
 end
 
 return {
 	{
-		"vague2k/vague.nvim",
-		name = "vague",
+		"tjdevries/colorbuddy.nvim",
+		name = "colorbuddy",
 		lazy = false,
 		priority = 1000,
 		config = function()
-			require("vague").setup({
-				style = {
-					strings = "none",
-					keyword_return = "none",
-				},
-			})
 			ColorMyPencils()
 		end,
 	},
@@ -27,6 +21,7 @@ return {
 		priority = 1000,
 		config = function()
 			require("catppuccin").setup({
+				flavour = "frappe",
 				transparent_background = true,
 				no_italic = false,
 				styles = {
