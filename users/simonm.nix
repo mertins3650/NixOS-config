@@ -25,6 +25,7 @@ in
     pkgs.libnotify
     pkgs.swaynotificationcenter
     pkgs.nh
+    pkgs.xterm
   ];
     
   programs = {

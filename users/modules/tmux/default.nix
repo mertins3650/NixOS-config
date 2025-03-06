@@ -5,7 +5,7 @@
     tmux = {
         enable = true;
         extraConfig = ''
-            set -g default-terminal "tmux-256color"
+            set-option -g default-terminal "tmux-256color"
             set -s escape-time 0
 
             unbind C-b

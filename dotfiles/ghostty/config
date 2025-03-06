@@ -6,4 +6,4 @@ background = 111111
 command = tmux
 font-size = 16
 font-feature = -liga
-font-family = "CaskaydiaCove Nerd Font Mono"
+font-family = "CaskaydiaCove Nerd Font"
