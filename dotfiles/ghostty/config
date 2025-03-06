@@ -1,7 +1,7 @@
 shell-integration-features = no-cursor,no-sudo,title
 window-padding-color = background
 window-decoration = false
-theme = rose-pine
+theme = catppuccin-frappe
 background = 111111
 command = tmux
 font-size = 16
