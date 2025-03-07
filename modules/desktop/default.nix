@@ -2,10 +2,8 @@
 
   services.xserver.enable = false;
   services.xserver.displayManager.gdm.enable = true;
-  programs.hyprland.enable = true;
   services.xserver.desktopManager.gnome.enable = false;
   services.gnome.gnome-keyring.enable = true;
-  security.pam.services.hyprland.enableGnomeKeyring = true;
   security.pam.services.sway.enableGnomeKeyring = true;
   security.pam.services.gdm.enableGnomeKeyring = true;
   security.pam.services.gdm-password.enableGnomeKeyring = true;
@@ -24,10 +22,6 @@
 
   environment.systemPackages = with pkgs; [
     nautilus
-    hypridle
-    hyprlock
-    hyprpaper
-    hyprshot
     grim
     slurp
     swayidle
