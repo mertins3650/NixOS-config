@@ -72,9 +72,8 @@ in
   };
 
   home.activation.createSymlink = ''
-    rm -rf ~/.config/hypr ~/.config/nvim
-    mkdir -p ~/.config/hypr ~/.config/nvim
-    ln -s /home/simonm/NixOS-config/dotfiles/hypr/* ~/.config/hypr/
+    rm -rf ~/.config/nvim
+    mkdir -p ~/.config/nvim
     ln -s /home/simonm/NixOS-config/dotfiles/nvim/* ~/.config/nvim/
   '';
 
