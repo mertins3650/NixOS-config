@@ -80,6 +80,7 @@ in
 
   home.sessionVariables = {
     EDITOR = "nvim";
+    PATH = "$HOME/go/bin:$PATH";
   };
 
   programs.home-manager.enable = true;
