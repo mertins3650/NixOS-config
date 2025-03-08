@@ -1,8 +1,6 @@
-{ pkgs, ... }:
+{  ... }:
 
 {
-  home.shell = pkgs.zsh;
-
   programs = {
     zsh = {
         enable = true;
