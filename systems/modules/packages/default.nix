@@ -12,6 +12,7 @@
   environment.systemPackages = with pkgs; [
   curl
   jq
+  feh
   git
   libpng
   libsecret
