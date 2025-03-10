@@ -1,19 +1,23 @@
 function ColorMyPencils(color)
-	color = color or "catppuccin-frappe"
-	--color = color or "rose-pine-moon"
+	-- color = color or "catppuccin-frappe"
+	color = color or "tokyonight-moon"
 	vim.cmd.colorscheme(color)
 end
 
 return {
 	{
-		"rose-pine/neovim",
-		name = "rose-pine",
+		"folke/tokyonight.nvim",
+		name = "tokyonight",
 		config = function()
-			require("rose-pine").setup({
+			require("tokyonight").setup({
+				transparent = true,
+				style = "moon",
 				styles = {
-					transparency = true,
-					italic = false,
+					keywords = { italic = false },
 				},
+				on_highlights = function(highlights)
+					highlights["@tag.tsx"] = { fg = "#82aaff" }
+				end,
 			})
 			ColorMyPencils()
 		end,
