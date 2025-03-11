@@ -1,6 +1,7 @@
 { ... }:
 {
   imports = [
+    ./c
     ./cleanup
     ./desktop
     ./docker
