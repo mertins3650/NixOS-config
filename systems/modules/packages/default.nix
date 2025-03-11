@@ -7,6 +7,9 @@
     firefox = {
       enable = true;
     };
+    gnome-disks = {
+    enable = true;
+    };
   };
 
   environment.systemPackages = with pkgs; [

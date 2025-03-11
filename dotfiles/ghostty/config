@@ -5,5 +5,5 @@ theme = catppuccin-frappe
 background = 111111
 command = tmux
 font-size = 16
-font-feature = -liga
+font-feature = -calt, -liga, -dlig
 font-family = "CaskaydiaCove Nerd Font"
