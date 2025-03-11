@@ -4,6 +4,5 @@
     ./desktop
     ./docker
     ./steam
-    ./terminal
   ];
 }
