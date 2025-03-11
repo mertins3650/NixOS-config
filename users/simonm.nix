@@ -1,9 +1,8 @@
-{ config, lib,  pkgs, ... }:
+{ config, pkgs, ... }:
 
 let
     devcommitScript = import ../scripts/dev-commit.nix { pkgs = pkgs; };
     tmux-sessionizerScript = import ../scripts/tmux-sessionizer.nix { pkgs = pkgs; };
-    devinitScript = import ../scripts/devinit.nix { pkgs = pkgs; };
 in
 
 {
@@ -17,7 +16,6 @@ in
   home.stateVersion = "24.11"; 
   
   home.packages = [
-    devinitScript
     devcommitScript
     tmux-sessionizerScript 
     pkgs.zoxide
