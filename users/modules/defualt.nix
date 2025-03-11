@@ -1,5 +1,6 @@
 { ... }: {  
   imports = [
+    ./formatters
     ./lsp
     ./neovim
     ./theme
