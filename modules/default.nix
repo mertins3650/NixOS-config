@@ -4,6 +4,7 @@
     ./cleanup
     ./desktop
     ./docker
+    ./lua
     ./steam
   ];
 }
