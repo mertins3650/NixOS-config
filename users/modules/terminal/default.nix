@@ -7,8 +7,6 @@
     ghostty
     ripgrep
     yazi
-    clang
-    gcc
     luajit
   ];
 }
