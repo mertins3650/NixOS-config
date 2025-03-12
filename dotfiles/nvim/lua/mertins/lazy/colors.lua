@@ -15,9 +15,9 @@ return {
 				styles = {
 					keywords = { italic = false },
 				},
-				on_highlights = function(highlights)
-					highlights["@tag.tsx"] = { fg = "#82aaff" }
-				end,
+				-- on_highlights = function(highlights)
+				-- 	highlights["@tag.tsx"] = { fg = "#82aaff" }
+				-- end,
 			})
 			ColorMyPencils()
 		end,
