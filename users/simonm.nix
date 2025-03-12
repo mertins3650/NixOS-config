@@ -2,7 +2,7 @@
 
 let
   devcommitScript = import ../scripts/dev-commit.nix { pkgs = pkgs; };
-  psdocker = import ../scripts/mysqldocker.nix { pkgs = pkgs; };
+  psdocker = import ../scripts/psdocker.nix { pkgs = pkgs; };
   mysqldocker = import ../scripts/mysqldocker.nix { pkgs = pkgs; };
   tmux-sessionizerScript = import ../scripts/tmux-sessionizer.nix { pkgs = pkgs; };
 in
