@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
 
   services.xserver.enable = false;
   services.xserver.displayManager.gdm.enable = true;
@@ -7,11 +8,14 @@
   security.pam.services.sway.enableGnomeKeyring = true;
   security.pam.services.gdm.enableGnomeKeyring = true;
   security.pam.services.gdm-password.enableGnomeKeyring = true;
+  services.udisks2.enable = true;
+  services.devmon.enable = true;
+  services.gvfs.enable = true;
 
   fonts.packages = with pkgs; [
-      nerd-fonts.fira-code
-      nerd-fonts.droid-sans-mono
-      nerd-fonts.caskaydia-cove
+    nerd-fonts.fira-code
+    nerd-fonts.droid-sans-mono
+    nerd-fonts.caskaydia-cove
   ];
   programs = {
     sway = {
@@ -33,8 +37,7 @@
     wayland-protocols
     wl-clipboard
     xwayland
-    lxappearance       
+    lxappearance
     libsForQt5.qt5ct
-    ];
+  ];
 }
-
