@@ -11,7 +11,7 @@ in
 
   home.username = "simonm";
   home.homeDirectory = "/home/simonm";
-  home.stateVersion = "24.11";
+  home.stateVersion = "25.05";
 
   home.packages = [
     tmux-sessionizerScript
@@ -19,7 +19,6 @@ in
     pkgs.libnotify
     pkgs.swaynotificationcenter
     pkgs.nh
-    pkgs.xterm
   ];
 
   programs = {
