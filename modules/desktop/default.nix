@@ -2,7 +2,10 @@
 {
 
   services.xserver.enable = false;
-  services.xserver.displayManager.gdm.enable = true;
+  security.pam.services.gdm.enableGnomeKeyring = true;
+  services.displayManager.ly.enable = true;
+  security.pam.services.ly.enableGnomeKeyring = true;
+  security.pam.services.login.enableGnomeKeyring = true;
   services.udisks2.enable = true;
   services.devmon.enable = true;
   services.gvfs.enable = true;

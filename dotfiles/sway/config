@@ -16,6 +16,8 @@ set $right l
 set $term ghostty
 set $menu exec fuzzel
 
+exec --no-startup-id /run/current-system/sw/bin/gnome-keyring-daemon --start --components=secrets,pkcs11,ssh,gpg
+
 
 #input options
 input * {
