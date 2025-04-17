@@ -21,6 +21,11 @@
             bind -r h select-pane -L
             bind -r l select-pane -R
 
+            set-window-option -g mode-keys vi
+            bind v copy-mode
+            bind -T copy-mode-vi v send-keys -X begin-selection
+            bind -T copy-mode-vi y send-keys -X copy-pipe-and-cancel 'wl-copy'
+
             bind-key -r f run-shell "tmux neww tmux-sessionizer"
             bind-key -r g run-shell "tmux neww dev-commit"
         '';

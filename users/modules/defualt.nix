@@ -1,5 +1,7 @@
 { ... }: {  
   imports = [
+    ./c
+    ./lua
     ./formatters
     ./languages
     ./lsp

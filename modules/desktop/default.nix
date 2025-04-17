@@ -3,11 +3,6 @@
 
   services.xserver.enable = false;
   services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = false;
-  services.gnome.gnome-keyring.enable = true;
-  security.pam.services.sway.enableGnomeKeyring = true;
-  security.pam.services.gdm.enableGnomeKeyring = true;
-  security.pam.services.gdm-password.enableGnomeKeyring = true;
   services.udisks2.enable = true;
   services.devmon.enable = true;
   services.gvfs.enable = true;

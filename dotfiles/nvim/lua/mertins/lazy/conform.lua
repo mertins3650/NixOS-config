@@ -33,6 +33,7 @@ return {
 				javascript = { "prettierd" },
 				typescript = { "prettierd" },
 				html = { "prettierd" },
+				astro = { "prettierd" },
 				nix = { "nixfmt" },
 				python = { "ruff" },
 			},

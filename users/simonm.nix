@@ -1,9 +1,6 @@
 { config, pkgs, ... }:
 
 let
-  devcommitScript = import ../scripts/dev-commit.nix { pkgs = pkgs; };
-  psdocker = import ../scripts/psdocker.nix { pkgs = pkgs; };
-  mysqldocker = import ../scripts/mysqldocker.nix { pkgs = pkgs; };
   tmux-sessionizerScript = import ../scripts/tmux-sessionizer.nix { pkgs = pkgs; };
 in
 
@@ -17,11 +14,7 @@ in
   home.stateVersion = "24.11";
 
   home.packages = [
-    psdocker
-    mysqldocker
-    devcommitScript
     tmux-sessionizerScript
-    pkgs.zoxide
     pkgs.gh
     pkgs.libnotify
     pkgs.swaynotificationcenter

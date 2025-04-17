@@ -16,6 +16,7 @@ set $right l
 set $term ghostty
 set $menu exec fuzzel
 
+
 #input options
 input * {
     xkb_layout "dk"
@@ -25,17 +26,17 @@ input "type:pointer" accel_profile flat
 #??
 include /etc/sway/config-vars.d/*
 
-output * bg $HOME/NixOS-config/misc/backgrounds/better_shaded_landscape.jpg fill
+output * bg $HOME/dotfiles/misc/backgrounds/better_shaded_landscape.jpg fill
 default_border pixel 4
 bindsym $mod+Shift+f exec swaymsg output eDP-1 enable
 bindsym $mod+Shift+d exec swaymsg output eDP-1 disable
 
 #Locksreen
 exec_always swayidle -w \
-    timeout 300 'swaylock -f --image $HOME/NixOS-config/misc/backgrounds/better_shaded_landscape.jpg' \
-    timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-    before-sleep 'swaylock -f --image $HOME/NixOS-config/misc/backgrounds/better_shaded_landscape.jpg'
-bindsym $mod+Mod1+l exec swaylock --image $HOME/NixOS-config/misc/backgrounds/shaded_landscape.png 
+    timeout 300 'swaylock -f --image $HOME/dotfiles/misc/backgrounds/better_shaded_landscape.jpg' \
+    timeout 480 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+    before-sleep 'swaylock -f --image $HOME/dotfiles/misc/backgrounds/better_shaded_landscape.jpg'
+bindsym $mod+Mod1+l exec swaylock --image $HOME/dotfiles/misc/backgrounds/better_shaded_landscape.jpg
 
 ### Key bindings
 # Full screen screenshot
@@ -47,12 +48,12 @@ bindsym Shift+Print exec grim -g "$(slurp)" ~/Pictures/screenshot-$(date +%Y-%m-
 
     #Screen/audio control
     bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-    # bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+    bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
     bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
     bindsym $mod+Return exec $term
     bindsym Mod1+4 exec $term -e lazydocker
 
-bindsym XF86AudioLowerVolume exec brightnessctl set +10% # increase screen brightness
+bindsym XF86MonBrightnessUp exec brightnessctl set +10% # increase screen brightness
 bindsym XF86MonBrightnessDown exec brightnessctl set 10%- # decrease screen brightness
 
 
