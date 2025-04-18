@@ -16,7 +16,6 @@
   curl
   jq
   feh
-  git
   libpng
   libsecret
   protonup
